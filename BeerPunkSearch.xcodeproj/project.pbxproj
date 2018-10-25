@@ -11,6 +11,9 @@
 		19BF4A7C21822031006602AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BF4A7A21822031006602AD /* Main.storyboard */; };
 		19BF4A7E21822032006602AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19BF4A7D21822032006602AD /* Assets.xcassets */; };
 		19BF4A8121822032006602AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BF4A7F21822032006602AD /* LaunchScreen.storyboard */; };
+		19BF4A8C21822370006602AD /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BF4A8B21822370006602AD /* Beer.swift */; };
+		19BF4A8E218226F8006602AD /* BeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BF4A8D218226F8006602AD /* BeerController.swift */; };
+		19BF4A922182338F006602AD /* BeerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BF4A912182338F006602AD /* BeerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		19BF4A7D21822032006602AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19BF4A8021822032006602AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19BF4A8221822032006602AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19BF4A8B21822370006602AD /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		19BF4A8D218226F8006602AD /* BeerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerController.swift; sourceTree = "<group>"; };
+		19BF4A912182338F006602AD /* BeerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +58,56 @@
 		19BF4A7521822031006602AD /* BeerPunkSearch */ = {
 			isa = PBXGroup;
 			children = (
-				19BF4A7621822031006602AD /* AppDelegate.swift */,
-				19BF4A7A21822031006602AD /* Main.storyboard */,
-				19BF4A7D21822032006602AD /* Assets.xcassets */,
-				19BF4A7F21822032006602AD /* LaunchScreen.storyboard */,
-				19BF4A8221822032006602AD /* Info.plist */,
+				19BF4A9021823375006602AD /* ViewController */,
+				19BF4A8A2182234A006602AD /* Model */,
+				19BF4A882182230D006602AD /* Storyboard */,
+				19BF4A8921822320006602AD /* Resources */,
 			);
 			path = BeerPunkSearch;
+			sourceTree = "<group>";
+		};
+		19BF4A882182230D006602AD /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				19BF4A7F21822032006602AD /* LaunchScreen.storyboard */,
+				19BF4A7A21822031006602AD /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		19BF4A8921822320006602AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				19BF4A7D21822032006602AD /* Assets.xcassets */,
+				19BF4A7621822031006602AD /* AppDelegate.swift */,
+				19BF4A8221822032006602AD /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		19BF4A8A2182234A006602AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19BF4A8B21822370006602AD /* Beer.swift */,
+				19BF4A8F21822702006602AD /* ModelController */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19BF4A8F21822702006602AD /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				19BF4A8D218226F8006602AD /* BeerController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		19BF4A9021823375006602AD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				19BF4A912182338F006602AD /* BeerTableViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +182,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				19BF4A7721822031006602AD /* AppDelegate.swift in Sources */,
+				19BF4A922182338F006602AD /* BeerTableViewController.swift in Sources */,
+				19BF4A8E218226F8006602AD /* BeerController.swift in Sources */,
+				19BF4A8C21822370006602AD /* Beer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57CQ48CJGQ;
-				INFOPLIST_FILE = BeerPunkSearch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BeerPunkSearch/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +350,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57CQ48CJGQ;
-				INFOPLIST_FILE = BeerPunkSearch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BeerPunkSearch/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
