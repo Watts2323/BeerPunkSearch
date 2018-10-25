@@ -47,7 +47,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="qJZ-hn-FTl" kind="show" id="ik8-5z-gL4"/>
+                                    <segue destination="qJZ-hn-FTl" kind="show" identifier="toDetailBeerVC" id="ik8-5z-gL4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -65,40 +65,37 @@
             </objects>
             <point key="canvasLocation" x="147" y="97"/>
         </scene>
-        <!--View Controller-->
+        <!--Beer Detail View Controller-->
         <scene sceneID="5oP-ZL-laZ">
             <objects>
-                <viewController id="qJZ-hn-FTl" sceneMemberID="viewController">
+                <viewController id="qJZ-hn-FTl" customClass="BeerDetailViewController" customModule="BeerPunkSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vHM-Hc-Vnl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="UAl-O1-JIC">
-                                <rect key="frame" x="44" y="86" width="287" height="495.5"/>
+                                <rect key="frame" x="68" y="86" width="239" height="487"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ENL-nG-s9L">
-                                        <rect key="frame" x="0.0" y="0.0" width="287" height="359"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="ENL-nG-s9L" secondAttribute="height" multiplier="4:5" id="77a-yb-Wp8"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="239" height="350"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="mvC-mo-53H">
-                                        <rect key="frame" x="0.0" y="388" width="138" height="107.5"/>
+                                        <rect key="frame" x="0.0" y="379" width="138" height="108"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Beer name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPx-Ga-Q4Q">
-                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(ABV)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xI-Nr-smz">
-                                                <rect key="frame" x="0.0" y="43.5" width="45.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="44" width="45.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Beer Ingredients)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVc-qn-kQn">
-                                                <rect key="frame" x="0.0" y="87" width="138" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="87.5" width="138" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -110,11 +107,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="UAl-O1-JIC" firstAttribute="top" secondItem="mPd-xO-WSN" secondAttribute="top" constant="22" id="DpQ-uK-kb2"/>
                             <constraint firstItem="UAl-O1-JIC" firstAttribute="centerX" secondItem="vHM-Hc-Vnl" secondAttribute="centerX" id="Kox-wU-vOL"/>
-                            <constraint firstItem="UAl-O1-JIC" firstAttribute="centerY" secondItem="vHM-Hc-Vnl" secondAttribute="centerY" id="eIc-Iz-gj5"/>
+                            <constraint firstItem="UAl-O1-JIC" firstAttribute="leading" secondItem="mPd-xO-WSN" secondAttribute="leading" constant="68" id="c2k-lO-ic4"/>
+                            <constraint firstItem="mPd-xO-WSN" firstAttribute="bottom" secondItem="UAl-O1-JIC" secondAttribute="bottom" constant="94" id="wk5-Lz-iPE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mPd-xO-WSN"/>
                     </view>
+                    <connections>
+                        <outlet property="abvLabel" destination="0xI-Nr-smz" id="I4t-XE-Hrj"/>
+                        <outlet property="beerImageView" destination="ENL-nG-s9L" id="VuG-o5-8nV"/>
+                        <outlet property="beerIngredientsLabel" destination="tVc-qn-kQn" id="SpH-4h-dWl"/>
+                        <outlet property="beerNameLabel" destination="HPx-Ga-Q4Q" id="jZA-OM-YhL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j0g-Tn-757" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

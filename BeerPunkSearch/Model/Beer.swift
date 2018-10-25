@@ -13,8 +13,16 @@ struct Beer: Decodable {
     var tagline: String
     var abv: Double
     var imageURL: URL?
-    
     let ingredients: Ingredients
+    
+    var ingredientsString: String {
+        
+        var ingredientsArray: [String] = []
+        for malt in ingredients.malts {
+            ingredientsArray.append(malt.name)
+        }
+        return ingredients.malts.compactMap {$0.name}.joined(separator: ", ")
+    }
     
     enum CodingKeys: String, CodingKey {
         case name

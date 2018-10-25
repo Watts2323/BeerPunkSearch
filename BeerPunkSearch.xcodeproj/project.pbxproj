@@ -14,6 +14,7 @@
 		19BF4A8C21822370006602AD /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BF4A8B21822370006602AD /* Beer.swift */; };
 		19BF4A8E218226F8006602AD /* BeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BF4A8D218226F8006602AD /* BeerController.swift */; };
 		19BF4A922182338F006602AD /* BeerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BF4A912182338F006602AD /* BeerTableViewController.swift */; };
+		19BF4A9421823670006602AD /* BeerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BF4A9321823670006602AD /* BeerDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		19BF4A8B21822370006602AD /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		19BF4A8D218226F8006602AD /* BeerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerController.swift; sourceTree = "<group>"; };
 		19BF4A912182338F006602AD /* BeerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableViewController.swift; sourceTree = "<group>"; };
+		19BF4A9321823670006602AD /* BeerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				19BF4A912182338F006602AD /* BeerTableViewController.swift */,
+				19BF4A9321823670006602AD /* BeerDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19BF4A9421823670006602AD /* BeerDetailViewController.swift in Sources */,
 				19BF4A7721822031006602AD /* AppDelegate.swift in Sources */,
 				19BF4A922182338F006602AD /* BeerTableViewController.swift in Sources */,
 				19BF4A8E218226F8006602AD /* BeerController.swift in Sources */,
